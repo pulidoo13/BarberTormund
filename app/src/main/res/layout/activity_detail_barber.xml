@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.DetailBarberActivity">
+
+    <TextView
+        android:id="@+id/close_detail"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/ic_baseline_clear_24px"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:drawableTint="@android:color/darker_gray"
+
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/sample_foto"/>
+        <TextView
+
+            android:layout_width="match_parent"
+            android:text="Jose Isikawa"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Miembro desde Ago 2018"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Comentarios"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="left"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/customer_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="25dp"
+
+            >
+            <!-- LINEAR LAYOUT SCROLL !-->
+            <LinearLayout android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+
+                <GridView
+                    android:id="@+id/gridGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:columnWidth="100dp"
+                    android:numColumns="auto_fit"></GridView>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
